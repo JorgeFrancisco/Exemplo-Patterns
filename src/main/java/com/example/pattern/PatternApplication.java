@@ -10,8 +10,8 @@ import com.example.pattern.gof.creationalpattern.abstractfactory.fabricas.core.P
 import com.example.pattern.gof.creationalpattern.abstractfactory.fabricas.spring.AbstractFactoryService;
 import com.example.pattern.gof.creationalpattern.builder.Car;
 import com.example.pattern.gof.creationalpattern.builder.CarBuilder;
-import com.example.pattern.gof.creationalpattern.builder.Director;
-import com.example.pattern.gof.creationalpattern.builder.SportsCarBuilder;
+import com.example.pattern.gof.creationalpattern.builder.core.Director;
+import com.example.pattern.gof.creationalpattern.builder.core.SportsCarBuilder;
 import com.example.pattern.gof.creationalpattern.builder.spring.BuilderService;
 import com.example.pattern.gof.creationalpattern.factorymethod.factory.Logistic;
 import com.example.pattern.gof.creationalpattern.factorymethod.factory.core.RoadLogistic;

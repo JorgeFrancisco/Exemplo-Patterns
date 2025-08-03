@@ -1,4 +1,7 @@
-package com.example.pattern.gof.creationalpattern.builder;
+package com.example.pattern.gof.creationalpattern.builder.core;
+
+import com.example.pattern.gof.creationalpattern.builder.Car;
+import com.example.pattern.gof.creationalpattern.builder.CarBuilder;
 
 public class SportsCarBuilder implements CarBuilder {
 
