@@ -1,4 +1,4 @@
-package com.example.pattern.runner;
+package com.example.pattern.gof.creationalpattern.executor;
 
 import org.springframework.stereotype.Component;
 
