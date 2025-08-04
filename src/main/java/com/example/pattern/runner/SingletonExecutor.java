@@ -19,10 +19,14 @@ public class SingletonExecutor {
 	public void run() {
 		ConsoleUtils.printTitle("Singleton (Spring)");
 
-		singletonService.doSomething();
+		springRun();
 
 		ConsoleUtils.printTitle("Singleton (Puro)");
 
+		coreRun();
+	}
+
+	private void coreRun() {
 		Singleton s1 = Singleton.getInstance();
 		Singleton s2 = Singleton.getInstance();
 
@@ -32,5 +36,9 @@ public class SingletonExecutor {
 		SingletonHolder sh2 = SingletonHolder.getInstance();
 
 		System.out.println("sh1 == sh2? " + (sh1 == sh2));
+	}
+
+	private void springRun() {
+		singletonService.doSomething();
 	}
 }

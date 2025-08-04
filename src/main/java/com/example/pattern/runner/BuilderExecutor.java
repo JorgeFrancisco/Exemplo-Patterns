@@ -21,12 +21,14 @@ public class BuilderExecutor {
 	public void run() {
 		ConsoleUtils.printTitle("Factory Method (Spring)");
 
-		Car sportsCarSpring = builderService.criarCarro("sports");
-
-		System.out.println(sportsCarSpring);
+		springRun();
 
 		ConsoleUtils.printTitle("Factory Method (Puro)");
 
+		coreRun();
+	}
+
+	private void coreRun() {
 		// Instancia o builder específico
 		CarBuilder builder = new SportsCarBuilder();
 
@@ -40,6 +42,12 @@ public class BuilderExecutor {
 		Car sportsCar = builder.getResult();
 
 		// Exibe o resultado
+		System.out.println(sportsCar);
+	}
+
+	private void springRun() {
+		Car sportsCar = builderService.criarCarro("sports");
+
 		System.out.println(sportsCar);
 	}
 }

@@ -20,11 +20,14 @@ public class FactoryMethodExecutor {
 	public void run() {
 		ConsoleUtils.printTitle("Factory Method (Spring)");
 
-		factoryMethodService.executarEntrega("road");
-		factoryMethodService.executarEntrega("sea");
+		springRun();
 
 		ConsoleUtils.printTitle("Factory Method (Puro)");
 
+		coreRun();
+	}
+
+	private void coreRun() {
 		String tipoEntrega = "sea";
 
 		Logistic logistic;
@@ -38,5 +41,10 @@ public class FactoryMethodExecutor {
 		}
 
 		logistic.planDeliver();
+	}
+
+	private void springRun() {
+		factoryMethodService.executarEntrega("road");
+		factoryMethodService.executarEntrega("sea");
 	}
 }

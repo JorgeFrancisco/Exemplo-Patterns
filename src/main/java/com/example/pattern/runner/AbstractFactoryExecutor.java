@@ -21,14 +21,14 @@ public class AbstractFactoryExecutor {
 	public void run() {
 		ConsoleUtils.printTitle("Abstract Factory (Spring)");
 
-		DeliveryFactory factorySpring = abstractFactoryService.selecionaTipo("hamburgueria");
-
-		Cliente clienteSpring = new Cliente(factorySpring);
-
-		clienteSpring.criaPedido("tomate");
+		springRun();
 
 		ConsoleUtils.printTitle("Abstract Factory (Puro)");
 
+		coreRun();
+	}
+
+	private void coreRun() {
 		String tipoDelivery = "pizzaria";
 
 		DeliveryFactory factory;
@@ -44,5 +44,13 @@ public class AbstractFactoryExecutor {
 		Cliente cliente = new Cliente(factory);
 
 		cliente.criaPedido("cebola");
+	}
+
+	private void springRun() {
+		DeliveryFactory factory = abstractFactoryService.selecionaTipo("hamburgueria");
+
+		Cliente cliente = new Cliente(factory);
+
+		cliente.criaPedido("tomate");
 	}
 }
